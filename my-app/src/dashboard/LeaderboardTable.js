@@ -160,7 +160,7 @@ const LeaderboardTable = () => {
             variant="h5"
             id="tableTitle"
           >
-            Top Learners
+            Top Learners - 2022
           </Typography>
           <TableContainer
             component={Paper}
