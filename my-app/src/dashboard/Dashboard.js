@@ -22,6 +22,7 @@ import Button from '@mui/material/Button'
 import Orders from './Orders';
 import UserInfo from './UserInfo';
 import theme from '../styles/theme';
+import LeaderboardTable from './LeaderboardTable';
 
 function Copyright(props) {
   return (
