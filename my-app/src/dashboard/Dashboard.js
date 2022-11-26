@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./table.css";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
@@ -18,10 +19,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
-import Chart from "./Chart";
-import Deposits from "./Deposits";
-import Button from '@mui/material/Button'
-import Orders from "./Orders";
+import Button from '@mui/material/Button';
+import LeaderboardTable from "./LeaderboardTable";
 
 function Copyright(props) {
   return (
@@ -103,6 +102,7 @@ function DashboardContent() {
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
+              background: 'linear-gradient(270deg, #2196f3 50%, #42a5f5 100%)'
             }}
           >
             <IconButton
@@ -266,20 +266,8 @@ function DashboardContent() {
                   </Grid>
                 </Grid>
               </Grid>
+              <LeaderboardTable />
 
-              <Grid item xs={4}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    maxHeight: "800px",
-                    overflowY: "scroll",
-                  }}
-                >
-                  <Orders />
-                </Paper>
-              </Grid>
             </Grid>
           </Container>
         </Box>
