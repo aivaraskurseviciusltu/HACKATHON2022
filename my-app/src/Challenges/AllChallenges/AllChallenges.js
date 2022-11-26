@@ -6,6 +6,7 @@ import { TableContainer, TableBody, TableCell, TableHead, Table, TableRow, Grid,
 const AllOpenChallenges = (props) => {
   const [open, setOpen] = React.useState(false);
   const [data, setData] = React.useState(props.data);
+  const [progress, setProgress] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -19,6 +20,12 @@ const AllOpenChallenges = (props) => {
   const closeModal = () => {
     setOpen(false);
   }
+
+  React.useEffect(() => {
+    if(!calcStart()) {
+      setProgress(true);
+    }
+  }, [props.data]);
 
   const calcDiff = () => {
     const startDate = new Date(data.startDate);
@@ -82,7 +89,15 @@ const AllOpenChallenges = (props) => {
                 </TableRow>
               </TableHead>
                 <TableBody>
-                  {data.users.map((item, index) =>  
+                  {data.users.sort((a,b) => {
+                    const prev = a.learnings.reduce((accumulator, object) => {
+                      return accumulator + object.duration;
+                      }, 0)
+                      const next = b.learnings.reduce((accumulator, object) => {
+                        return accumulator + object.duration;
+                      }, 0)
+                      return next - prev;
+                  }).map((item, index) =>  
                     <TableRow
                       key={index}
                       sx={{ '&:last-child td, &:last-child th': { border: 0 },
@@ -112,7 +127,7 @@ const AllOpenChallenges = (props) => {
           </Grid>
         </Grid>
         {open && (
-          <ReusableModal open={open} data={data} handleClose={handleClose} onAddUser={handleAddUser} closeModal={closeModal}/>
+          <ReusableModal open={open} data={data} handleClose={handleClose} onAddUser={handleAddUser} closeModal={closeModal} inProgress={progress}/>
         )}
       </Paper>
     </Grid>

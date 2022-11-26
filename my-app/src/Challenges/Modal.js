@@ -43,7 +43,6 @@ const ReusableModal = (props) => {
     })
   }, [props]);
 
-
   const handleAddUser = () => {
     const newUser = {
       name: "Aivaras",
@@ -81,7 +80,7 @@ const ReusableModal = (props) => {
             <p>Start date: {props.data.startDate}</p>
             <p>Duration: {props.data.duration}</p>
           </div>
-          <DenseTable users={props.data.users} />
+          <DenseTable users={props.data.users} inProgress={props.inProgress}/>
           {calcStart() && <button onClick={handleAddUser} className={`btn ${joined && 'disabled'} ${effect && 'pulse'}`} disabled={joined}>Join</button>}
         </Box>
       </Fade>
