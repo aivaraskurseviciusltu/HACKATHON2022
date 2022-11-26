@@ -28,7 +28,6 @@
 }
 
 .btn {
-  background-color: #2196f3;
   color:#fff;
   margin-top: 16px;
   padding:10px;
@@ -36,12 +35,27 @@
   border:none;
   width:100%;
   font-size: 1.1rem;
-  transition: background-color 100ms ease-in-out;
+  background-color: #2196f3;
 }
 
 .btn:hover {
   cursor: pointer;
+}
+
+.pulse {
   background-color: #1976d2;
+  transition: 0.7s;
+  animation: pulse 0.5s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #2196f3; }
+}
+
+.disabled {
+  background-color: grey !important;
+  cursor: default !important;
 }
 
 .date-duration {

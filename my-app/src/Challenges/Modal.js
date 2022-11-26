@@ -5,7 +5,6 @@ import Fade from "@mui/material/Fade";
 import CloseIcon from '@mui/icons-material/Close';
 import React from "react";
 import DenseTable from "./UserTable";
-import { useEffect } from "react";
 
 const style = {
   position: "absolute",
@@ -23,6 +22,9 @@ const style = {
 
 
 const ReusableModal = (props) => {
+  const [joined, setJoined] = React.useState(false);
+  const [effect, setEffect] = React.useState(false);
+
   const calcStart = () => {
     const startDate = new Date(props.data.startDate).getTime();
     const today = new Date().getTime();
@@ -47,7 +49,9 @@ const ReusableModal = (props) => {
         },
       ],
     }
-    props.onAddUser(newUser)
+    props.onAddUser(newUser);
+    setEffect(true);
+    setJoined(true);
   }
 
   return (
@@ -71,7 +75,7 @@ const ReusableModal = (props) => {
             <p>Duration: {props.data.duration}</p>
           </div>
           <DenseTable users={props.data.users} />
-          {calcStart() && <button onClick={handleAddUser} className='btn'>Join</button>}
+          {calcStart() && <button onClick={handleAddUser} className={`btn ${joined && 'disabled'} ${effect && 'pulse'}`} disabled={joined}>Join</button>}
         </Box>
       </Fade>
     </Modal>
