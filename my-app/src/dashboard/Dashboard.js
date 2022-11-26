@@ -23,6 +23,7 @@ import Orders from './Orders';
 import UserInfo from './UserInfo';
 import theme from '../styles/theme';
 import LeaderboardTable from './LeaderboardTable';
+import logo from '../images/logo.svg'
 
 function Copyright(props) {
   return (
@@ -102,7 +103,7 @@ function DashboardContent() {
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
-              background: 'linear-gradient(270deg, #2196f3 50%, #42a5f5 100%)'
+              backgroundColor: "#000"
             }}
           >
             <IconButton
@@ -117,19 +118,25 @@ function DashboardContent() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              Dashboard
-            </Typography>
-
+            <Box sx={{ display: 'flex', flexGrow: 1, gap: 1, alignItems: 'center' }}>
+              <img alt='' src={logo} height="48px" />
+              <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+              >
+                Your Learning Challenges
+              </Typography>
+            </Box>
+            <IconButton color="inherit">
+              <Badge badgeContent={4} color="secondary">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={open} PaperProps={{ sx: { background: "#605E5E", color: "white", display: "flex", flexDirection: "column", justifyContent: "space-between" } }} >
+        <Drawer variant="permanent" open={open} PaperProps={{ sx: { background: "#262626", color: "white", display: "flex", flexDirection: "column", justifyContent: "space-between" } }} >
           <Box>
             <Toolbar
               sx={{
