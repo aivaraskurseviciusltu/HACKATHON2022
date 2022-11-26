@@ -7,8 +7,8 @@ const mockData = [
     startDate: "2022-10-29",
     users: [
       {
-        name: "John",
-        surname: "Doe",
+        name: "Aivaras",
+        surname: "Kursevicius",
         learnings: [
           {
             title: "Learning JS",
@@ -27,8 +27,8 @@ const mockData = [
         ],
       },
       {
-        name: "Jane",
-        surname: "Doe",
+        name: "Audrius",
+        surname: "Burkauskas",
         learnings: [
           {
             title: "Learning JS",
@@ -54,26 +54,38 @@ const mockData = [
     startDate: "2022-12-29",
     users: [
       {
-        name: "John",
-        surname: "Doe",
+        name: "Aivaras",
+        surname: "Stanaitis",
         learnings: [
         ],
       },
       {
-        name: "Jane",
-        surname: "Doe",
+        name: "Matas",
+        surname: "Dregva",
         learnings: [
         ],
       },
       {
-        name: "John",
-        surname: "Doe",
+        name: "Aurimas",
+        surname: "Zedelis",
         learnings: [
         ],
       },
       {
-        name: "Jane",
-        surname: "Doe",
+        name: "Kasparas",
+        surname: "Andrikys",
+        learnings: [
+        ],
+      },
+      {
+        name: "Marius",
+        surname: "Gliaudelis",
+        learnings: [
+        ],
+      },
+      {
+        name: "Oleg",
+        surname: "Valujev",
         learnings: [
         ],
       },
