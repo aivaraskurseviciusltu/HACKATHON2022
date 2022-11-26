@@ -13,9 +13,8 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 500,
   bgcolor: "background.paper",
-  border: "5px solid #2196f3",
   p: "10px 20px",
-  borderRadius: 6,
+  borderRadius: 2,
   '&:focus': { outline: "none"}
 };
 
@@ -67,7 +66,12 @@ const ReusableModal = (props) => {
       }}
     >
       <Fade in={props.open}>
-        <Box sx={style} onClick={props.handleClose} >
+        <Box sx={style} onClick={props.handleClose} 
+        className="border-custom">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           <button onMouseUp={handleCloseModal} className="close-btn"><CloseIcon /></button>
           <h3 className='modal-title'>{props.data.title}</h3>
           <div className='modal-date-duration'>
