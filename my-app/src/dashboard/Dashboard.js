@@ -22,6 +22,11 @@ import Button from '@mui/material/Button'
 import Orders from "./Orders";
 import MVPCard from "./MVPCard";
 import classes from "./MVPCard.module.css"
+import theme from '../styles/theme'
+import logo from '../images/logo.svg'
+import UserInfo from "./UserInfo";
+import Challenges from "../Challenges/Challenges";
+import LeaderboardTable from "./LeaderboardTable";
 
 function Copyright(props) {
   return (
