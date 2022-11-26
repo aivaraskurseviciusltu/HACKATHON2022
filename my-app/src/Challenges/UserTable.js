@@ -12,21 +12,23 @@ export default function DenseTable(props) {
     <TableContainer component={Paper}>
       <Table sx={{ maxWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
-          <TableRow>
-            <TableCell>No.</TableCell>
-            <TableCell>Name</TableCell>
+          <TableRow sx={{ backgroundColor: "#2196f3"}}>
+          <TableCell sx={{ color: "#fff", fontWeight: 600 }}>No.</TableCell>
+              <TableCell sx={{ color: "#fff", fontWeight: 600}}>Name</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {props.users.map((user, id) => (
             <TableRow
               key={id}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 },
+              '&:nth-child(odd) td': { backgroundColor: "#eeeeee" },
+            }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell component="td" scope="row">
                 {id + 1}
               </TableCell>
-              <TableCell component="th" scope="row">
+              <TableCell component="td" scope="row">
                 {user.name + ' ' + user.surname}
               </TableCell>
             </TableRow>

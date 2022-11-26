@@ -10,21 +10,38 @@
   text-align: center;
 }
 
+.close-btn {
+  position: absolute;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 24px;
+  right: 12px;
+  color: #000;
+  text-decoration: none;
+}
+
+.close-btn:hover {
+  color: #2196f3;
+  cursor: pointer;
+}
+
 .btn {
-  background-color: #af52bf;
+  background-color: #2196f3;
   color:#fff;
-  margin-top: 10px;
+  margin-top: 16px;
   padding:10px;
   border-radius: 10px;
   border:none;
-  width:100px;
+  width:100%;
   font-size: 1.1rem;
   transition: background-color 100ms ease-in-out;
 }
 
 .btn:hover {
   cursor: pointer;
-  background-color: #6d1b7b;
+  background-color: #1976d2;
 }
 
 .date-duration {
@@ -35,6 +52,7 @@
 }
 
 .modal-title {
+  margin: 0;
   text-align: center;
 }
 
@@ -43,4 +61,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.raise {
+  border:3px solid rgb(112, 114, 34);
+}
+
+.raise:hover,
+.raise:focus {
+  transition: 0.25s;
+  border:3px solid rgb(216, 216, 20);
+  box-shadow: 0 0.5em 0.5em -0.4em rgb(216, 216, 20);
+  transform: translateY(-0.25em);
 }

@@ -15,7 +15,11 @@ const AllOpenChallenges = (props) => {
 
     return startDate > today;
   }
-  
+
+  const closeModal = () => {
+    setOpen(false);
+  }
+
   const calcDiff = () => {
     const startDate = new Date(data.startDate);
     const today = new Date().getTime();
@@ -43,6 +47,7 @@ const AllOpenChallenges = (props) => {
           flexDirection: "column",
           height: 240,
         }}
+        className="raise"
       >
         <Grid container sx={{ borderBottom: "2px solid #2196f3", height: 48, padding: 1 }}>
           <Grid item xs={8}>
@@ -102,12 +107,12 @@ const AllOpenChallenges = (props) => {
           </Grid>
           <Grid item xs={4}>
             <Box sx={{ display: "flex", height: "100%", alignItems: "flex-end", justifyContent: "flex-end", fontWeight: 600}}>
-              { calcStart() ? `Start on: ${data.startDate}` : "Status: Open"}
+              { calcStart() ? `Start on: ${data.startDate}` : "Status: In Progess"}
             </Box>
           </Grid>
         </Grid>
         {open && (
-          <ReusableModal open={open} data={data} handleClose={handleClose} onAddUser={handleAddUser}/>
+          <ReusableModal open={open} data={data} handleClose={handleClose} onAddUser={handleAddUser} closeModal={closeModal}/>
         )}
       </Paper>
     </Grid>
