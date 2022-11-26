@@ -23,6 +23,7 @@ import Orders from './Orders';
 import UserInfo from './UserInfo';
 import theme from '../styles/theme';
 import LeaderboardTable from './LeaderboardTable';
+import Challenges from '../Challenges/Challenges';
 
 function Copyright(props) {
   return (
@@ -179,40 +180,9 @@ function DashboardContent() {
               <Grid item xs={8}>
                 <Grid container spacing={2} flexDirection="column">
                   <Grid item xs={12}>
-                    <Paper
-                      sx={{
-                        p: 2,
-                        display: "flex",
-                        flexDirection: "column",
-                        height: 240,
-                      }}
-                    >
-                      {/* Aurimo komponentas here */}
-                    </Paper>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Paper
-                      sx={{
-                        p: 2,
-                        display: "flex",
-                        flexDirection: "column",
-                        height: 240,
-                      }}
-                    >
-                      {/* Aurimo komponentas here */}
-                    </Paper>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Paper
-                      sx={{
-                        p: 2,
-                        display: "flex",
-                        flexDirection: "column",
-                        height: 240,
-                      }}
-                    >
-                      {/* Aurimo komponentas here */}
-                    </Paper>
+                    <Grid container spacing={3}>
+                      <Challenges />
+                    </Grid>
                   </Grid>
                 </Grid>
                 <Grid item xs={12} sx={{ paddingTop: "12px" }}>
