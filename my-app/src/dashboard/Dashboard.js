@@ -29,7 +29,7 @@ import fire from "./assets/lottie/fire.json";
 import trophy from "./assets/lottie/trophy.json";
 import arrowUp from "./assets/lottie/rocket.json";
 import buttonClasses from "./Dashboard.module.css";
-
+import backgroundImg from './assets/background.png';
 
 const drawerWidth = 240;
 
@@ -181,8 +181,10 @@ function DashboardContent() {
 
           <Box
             component="main"
+            // style={{backgroundImage: backgroundImg}}
             sx={{
-              backgroundColor: "#484848",
+              background: `url(${backgroundImg})`,
+              // backgroundColor: "#484848",
               flexGrow: 1,
               height: "100vh",
               overflow: "auto",
@@ -205,7 +207,7 @@ function DashboardContent() {
                       <Grid item xs={4}>
                         <MVPCard
                           title="2021 MVP"
-                          hours="5040"
+                          hours="504"
                           cssClass={classes.card1}
                           animation={trophy}
                         />
@@ -213,7 +215,7 @@ function DashboardContent() {
                       <Grid item xs={4}>
                         <MVPCard
                           title="Q3 MVP"
-                          hours="2011"
+                          hours="224"
                           cssClass={classes.card2}
                           animation={arrowUp}
                         />
@@ -221,7 +223,7 @@ function DashboardContent() {
                       <Grid item xs={4}>
                         <MVPCard
                           title="July MVP"
-                          hours="539"
+                          hours="102"
                           cssClass={classes.card3}
                           animation={fire}
                         />
