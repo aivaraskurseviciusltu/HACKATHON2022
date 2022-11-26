@@ -21,6 +21,7 @@ import { mainListItems } from './listItems';
 import Button from '@mui/material/Button'
 import Orders from './Orders';
 import UserInfo from './UserInfo';
+import theme from '../styles/theme';
 
 function Copyright(props) {
   return (
@@ -86,8 +87,6 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-const mdTheme = createTheme();
-
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -95,7 +94,7 @@ function DashboardContent() {
   };
 
   return (
-    <ThemeProvider theme={mdTheme}>
+    <ThemeProvider theme={theme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
@@ -154,7 +153,7 @@ function DashboardContent() {
             </List>
           </Box>
           <Box sx={{ py: 10 }}>
-            <Button variant="contained" color="warning">
+            <Button variant="contained" color="warning" sx={{ fontWeight: 700 }}>
               {open ? <div>Create <br /> new challenge  </div> : "+"}
             </Button>
           </Box>
