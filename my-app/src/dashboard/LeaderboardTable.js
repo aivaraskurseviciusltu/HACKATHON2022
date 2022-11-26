@@ -25,36 +25,36 @@ function createData(number, name, hours) {
 }
 
 const rows = [
-  createData(1, "Petras", 69),
-  createData(2, "Jonas", 19),
-  createData(3, "Kazys", 30),
-  createData(4, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
-  createData(5, "Kazys", 30),
+  createData(1, "Edita", 349),
+  createData(2, "Jonas", 345),
+  createData(3, "Elvyra", 295),
+  createData(4, "Odeta", 278),
+  createData(5, "Povilas", 273),
+  createData(6, "Laimonas", 269),
+  createData(7, "Audrius", 261),
+  createData(8, "Alius", 254),
+  createData(9, "Antanas", 249),
+  createData(10, "Aivaras", 230),
+  createData(11, "Juozas", 219),
+  createData(12, "Reda", 218),
+  createData(13, "Ignas", 217),
+  createData(14, "Guoda", 210),
+  createData(15, "Vytenis", 207),
+  createData(16, "Aivaras", 201),
+  createData(17, "Mykolas", 198),
+  createData(18, "Zaza", 192),
+  createData(19, "Ugniius", 183),
+  createData(20, "Aldona", 179),
+  createData(21, "Neringa", 174),
+  createData(22, "Adomas", 166),
+  createData(23, "Kristijonas", 150),
+  createData(24, "Kajus", 145),
+  createData(25, "Rokas", 139),
+  createData(26, "Vytautas", 133),
+  createData(27, "Eimantas", 127),
+  createData(28, "Oleg", 119),
+  createData(29, "Nojus", 113),
+  createData(30, "Egle", 111),
 ];
 
 const defaultGoldMeal = {
@@ -160,7 +160,7 @@ const LeaderboardTable = () => {
             variant="h5"
             id="tableTitle"
           >
-            Top Learners
+            Top Learners - 2022
           </Typography>
           <TableContainer
             component={Paper}
