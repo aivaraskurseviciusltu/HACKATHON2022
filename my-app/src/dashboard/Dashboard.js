@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
+import { styled, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -12,14 +12,12 @@ import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { mainListItems, secondaryListItems } from "./listItems";
+import { mainListItems } from "./listItems";
 import Button from '@mui/material/Button'
-import Orders from "./Orders";
 import MVPCard from "./MVPCard";
 import classes from "./MVPCard.module.css"
 import theme from '../styles/theme'
@@ -190,13 +188,13 @@ function DashboardContent() {
                 <Grid item xs={12} sx={{ paddingTop: "12px" }}>
                   <Grid container spacing={2}>
                     <Grid item xs={4}>
-                    <MVPCard title="2022 MVP" hours="5040" cssClass={classes.card1}/>
+                      <MVPCard title="2022 MVP" hours="5040" cssClass={classes.card1} />
                     </Grid>
                     <Grid item xs={4}>
-                      <MVPCard title="Q3 MVP" hours="2011" cssClass={classes.card2}/>
+                      <MVPCard title="Q3 MVP" hours="2011" cssClass={classes.card2} />
                     </Grid>
                     <Grid item xs={4}>
-                    <MVPCard title="July MVP" hours="539" cssClass={classes.card3}/>
+                      <MVPCard title="July MVP" hours="539" cssClass={classes.card3} />
                     </Grid>
                   </Grid>
                 </Grid>
