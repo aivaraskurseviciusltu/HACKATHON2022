@@ -171,7 +171,7 @@ function DashboardContent() {
           }}
         >
           <Toolbar />
-          <Container maxWidth="xl" sx={{ mt: 4, mb: 4}}>
+          <Container maxWidth="100%" sx={{ mt: 4, mb: 4}}>
             <Grid container spacing={2} >
               {/* challenge */}
               <Grid item xs={8}>
