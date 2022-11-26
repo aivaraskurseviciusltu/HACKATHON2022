@@ -20,6 +20,14 @@ const style = {
 
 
 const ReusableModal = (props) => {
+
+  const calcStart = () => {
+    const startDate = new Date(props.data.startDate).getTime();
+    const today = new Date().getTime();
+
+    return startDate > today;
+  }
+
   const handleAddUser = () => {
     const newUser = {
       name: "Kim",
@@ -56,7 +64,7 @@ const ReusableModal = (props) => {
             <p>Duration: {props.data.duration}</p>
           </div>
           <DenseTable users={props.data.users} />
-          {props.data.isOpen && <button onClick={handleAddUser} className='btn'>Join</button>}
+          {calcStart() && <button onClick={handleAddUser} className='btn'>Join</button>}
         </Box>
       </Fade>
     </Modal>

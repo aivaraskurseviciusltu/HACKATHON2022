@@ -17,12 +17,12 @@ const AllOpenChallenges = (props) => {
   }
   
   const calcDiff = () => {
-    const startDate = new Date(data.startDate).getTime();
+    const startDate = new Date(data.startDate);
     const today = new Date().getTime();
 
-    var Difference_In_Time =  today - startDate;
+    let Difference_In_Time = startDate.setDate(startDate.getDate() + data.duration) - today;
       
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
     return `Remaining Days: ${Math.floor(Difference_In_Days)}`;
   }
