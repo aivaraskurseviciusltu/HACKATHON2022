@@ -6,7 +6,7 @@
 	overflow: hidden;
 }
 
-.border-custom:before{
+/* .border-custom:before{
 	position: absolute;
 	top: 5px;
 	left: 5px;
@@ -14,7 +14,7 @@
 	content: '';
 	width: 50%;
 	background: rgba(255,255,255,0.05);
-}
+} */
 
 .border-custom span:nth-child(1){
 	position: absolute;
