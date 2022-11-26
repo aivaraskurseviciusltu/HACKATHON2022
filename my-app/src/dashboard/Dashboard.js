@@ -18,10 +18,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
-import Chart from "./Chart";
-import Deposits from "./Deposits";
 import Button from '@mui/material/Button'
 import Orders from "./Orders";
+import MVPCard from "./MVPCard";
+import classes from "./MVPCard.module.css"
 
 function Copyright(props) {
   return (
@@ -215,53 +215,14 @@ function DashboardContent() {
                 </Grid>
                 <Grid item xs={12} sx={{paddingTop: "12px"}}>
                   <Grid container spacing={2}>
-                    <Grid item xs={3}>
-                      <Paper
-                        sx={{
-                          p: 2,
-                          display: "flex",
-                          flexDirection: "column",
-                          height: 240,
-                        }}
-                      >
-                        {/* Aurimo komponentas here */}
-                      </Paper>
+                    <Grid item xs={4}>
+                    <MVPCard title="2022 MVP" hours="5040" cssClass={classes.card1}/>
                     </Grid>
-                    <Grid item xs={3}>
-                      <Paper
-                        sx={{
-                          p: 2,
-                          display: "flex",
-                          flexDirection: "column",
-                          height: 240,
-                        }}
-                      >
-                        {/* Aurimo komponentas here */}
-                      </Paper>
+                    <Grid item xs={4}>
+                      <MVPCard title="Q3 MVP" hours="2011" cssClass={classes.card2}/>
                     </Grid>
-                    <Grid item xs={3}>
-                      <Paper
-                        sx={{
-                          p: 2,
-                          display: "flex",
-                          flexDirection: "column",
-                          height: 240,
-                        }}
-                      >
-                        {/* Aurimo komponentas here */}
-                      </Paper>
-                    </Grid>
-                    <Grid item xs={3}>
-                      <Paper
-                        sx={{
-                          p: 2,
-                          display: "flex",
-                          flexDirection: "column",
-                          height: 240,
-                        }}
-                      >
-                        {/* Aurimo komponentas here */}
-                      </Paper>
+                    <Grid item xs={4}>
+                    <MVPCard title="July MVP" hours="539" cssClass={classes.card3}/>
                     </Grid>
                   </Grid>
                 </Grid>
