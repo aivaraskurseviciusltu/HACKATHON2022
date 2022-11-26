@@ -18,6 +18,7 @@ import goldMedal from "./assets/lottie/gold-medal.json";
 import silverMedal from "./assets/lottie/silver-medal.json";
 import bronzeMedal from "./assets/lottie/bronze-medal.json";
 import classes from "./LeaderboardTable.module.css";
+import {animationWidth} from '../utils/Constants'
 
 function createData(number, name, hours) {
   return { number, name, hours };
@@ -97,8 +98,8 @@ const renderLeaderboardSwitch = (param) => {
           style={animationStyle}
           className={classes.animation}
           options={defaultGoldMeal}
-          height={36}
-          width={36}
+          height={animationWidth}
+          width={animationWidth}
         />
       );
 
@@ -108,8 +109,8 @@ const renderLeaderboardSwitch = (param) => {
           style={animationStyle}
           className={classes.animation}
           options={defaultSilver}
-          height={36}
-          width={36}
+          height={animationWidth}
+          width={animationWidth}
         />
       );
 
@@ -119,8 +120,8 @@ const renderLeaderboardSwitch = (param) => {
           style={animationStyle}
           className={classes.animation}
           options={defaultBronze}
-          height={36}
-          width={36}
+          height={animationWidth}
+          width={animationWidth}
         />
       );
 
