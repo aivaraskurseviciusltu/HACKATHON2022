@@ -87,8 +87,6 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-const mdTheme = createTheme();
-
 function DashboardContent() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -96,13 +94,14 @@ function DashboardContent() {
   };
 
   return (
-    <ThemeProvider theme={mdTheme}>
+    <ThemeProvider theme={theme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
               pr: "24px", // keep right padding when drawer closed
+              backgroundColor: "#000"
             }}
           >
             <IconButton
@@ -117,15 +116,17 @@ function DashboardContent() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              sx={{ flexGrow: 1 }}
-            >
-              Dashboard
-            </Typography>
+            <Box sx={{ display: 'flex', flexGrow: 1, gap: 1, alignItems: 'center' }}>
+              <img alt='' src={logo} height="48px" />
+              <Typography
+                component="h1"
+                variant="h6"
+                color="inherit"
+                noWrap
+              >
+                Your Learning Challenges
+              </Typography>
+            </Box>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <NotificationsIcon />
@@ -133,87 +134,55 @@ function DashboardContent() {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={open}>
-          <Toolbar
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              px: [1],
-            }}
-          >
-            <IconButton onClick={toggleDrawer}>
-              <ChevronLeftIcon />
-            </IconButton>
-          </Toolbar>
-          <Divider />
-          <List component="nav">
-            {mainListItems}
-            <Divider sx={{ my: 1 }} />
-            {secondaryListItems}
-          </List>
-          <Box sx={{ pt: 10}}>
-            <Button variant="contained" color="warning">
-              {open ? <div>Create <br/> new challenge  </div>: "+"}
+        <Drawer variant="permanent" open={open} PaperProps={{ sx: { background: "#262626", color: "white", display: "flex", flexDirection: "column", justifyContent: "space-between" } }} >
+          <Box>
+            <Toolbar
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                px: [1],
+              }}
+            >
+              <IconButton onClick={toggleDrawer}>
+                <ChevronLeftIcon sx={{ color: "white" }} />
+              </IconButton>
+            </Toolbar>
+            <UserInfo display={open} />
+            <Divider sx={{ borderColor: "rgba(180, 180, 180,  0.22)" }} />
+            <List component="nav">
+              {mainListItems}
+              <Divider sx={{ my: 1, borderColor: "rgba(180, 180, 180,  0.22)" }} />
+            </List>
+          </Box>
+          <Box sx={{ py: 10 }}>
+            <Button variant="contained" color="warning" sx={{ fontWeight: 700 }}>
+              {open ? <div>Create <br /> new challenge  </div> : "+"}
             </Button>
           </Box>
         </Drawer>
         <Box
           component="main"
           sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === "light"
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+            backgroundColor: "#484848",
             flexGrow: 1,
             height: "100vh",
             overflow: "auto",
           }}
         >
           <Toolbar />
-          <Container maxWidth="100%" sx={{ mt: 4, mb: 4}}>
+          <Container maxWidth="100%" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={2} >
               {/* challenge */}
               <Grid item xs={8}>
                 <Grid container spacing={2} flexDirection="column">
                   <Grid item xs={12}>
-                    <Paper
-                      sx={{
-                        p: 2,
-                        display: "flex",
-                        flexDirection: "column",
-                        height: 240,
-                      }}
-                    >
-                      {/* Aurimo komponentas here */}
-                    </Paper>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Paper
-                      sx={{
-                        p: 2,
-                        display: "flex",
-                        flexDirection: "column",
-                        height: 240,
-                      }}
-                    >
-                      {/* Aurimo komponentas here */}
-                    </Paper>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Paper
-                      sx={{
-                        p: 2,
-                        display: "flex",
-                        flexDirection: "column",
-                        height: 240,
-                      }}
-                    >
-                      {/* Aurimo komponentas here */}
-                    </Paper>
+                    <Grid container spacing={3}>
+                      <Challenges />
+                    </Grid>
                   </Grid>
                 </Grid>
-                <Grid item xs={12} sx={{paddingTop: "12px"}}>
+                <Grid item xs={12} sx={{ paddingTop: "12px" }}>
                   <Grid container spacing={2}>
                     <Grid item xs={4}>
                     <MVPCard title="2022 MVP" hours="5040" cssClass={classes.card1}/>
@@ -227,20 +196,8 @@ function DashboardContent() {
                   </Grid>
                 </Grid>
               </Grid>
+              <LeaderboardTable />
 
-              <Grid item xs={4}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    maxHeight: "800px",
-                    overflowY: "scroll",
-                  }}
-                >
-                  <Orders />
-                </Paper>
-              </Grid>
             </Grid>
           </Container>
         </Box>
