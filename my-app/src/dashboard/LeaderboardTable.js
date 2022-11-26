@@ -48,7 +48,7 @@ const LeaderboardTable = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          maxHeight: "700px",
+          maxHeight: "905px",
           background: "linear-gradient(331deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 56%, rgba(36,161,72,1) 100%)",
         }}
         className="border-custom"
@@ -65,32 +65,32 @@ const LeaderboardTable = () => {
           >
             Top Learners
           </Typography>
-          <TableContainer component={Paper} sx={{ boxShadow: "none", maxHeight: "640px", overflowY: "auto" }}>
-            <Table sx={{ minWidth: "100%" }} size="small" aria-label="a dense table">
+          <TableContainer component={Paper} sx={{ boxShadow: "none", maxHeight: "645px", overflowY: "auto" }}>
+            <Table stickyHeader sx={{ minWidth: "100%" }} size="small" aria-label="a dense table">
               <TableHead>
-                <TableRow sx={{ backgroundColor: "#24a148" }}>
-                  <TableCell sx={{ color: "#fff", fontWeight: 600, borderColor: "#81d699" }}>Number</TableCell>
-                  <TableCell sx={{ color: "#fff", fontWeight: 600, borderColor: "#81d699" }}>Name</TableCell>
-                  <TableCell sx={{ color: "#fff", fontWeight: 600, borderColor: "#81d699" }} align="right">Score</TableCell>
+                <TableRow sx={{ backgroundColor: "#24a148", mt: "60px" }}>
+                  <TableCell sx={{ color: "#fff", fontWeight: 700, borderColor: "#81d699", backgroundColor: "#24a148" }}>Number</TableCell>
+                  <TableCell sx={{ color: "#fff", fontWeight: 700, borderColor: "#81d699", backgroundColor: "#24a148" }}>Name</TableCell>
+                  <TableCell sx={{ color: "#fff", fontWeight: 700, borderColor: "#81d699", backgroundColor: "#24a148" }} align="right">Score</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.sort((a, b) => a.number - b.number).map((row) => (
+                {rows.sort((a, b) => a.number - b.number).map((row, index) => (
                   <TableRow
                     key={row.number}
                     sx={{
-                      background: "linear-gradient(90deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 100%)",
+                      background: index === 0 ? "linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(255,215,0,0.8) 100%)" : index === 1 ? "linear-gradient(90deg, rgba(152,152,152,1) 0%, rgba(205,205,205,0.8) 100%)" : index === 2 ? "linear-gradient(90deg, rgba(193,108,24,1) 0%, rgba(205,127,50,0.6) 100%)" : "linear-gradient(90deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 100%)",
                       '&:last-child td, &:last-child th': { border: 0 },
                       textTransform: "none"
                     }}
                   >
-                    <StyledTableCell component="td" >
+                    <StyledTableCell component="td" sx={{ borderColor: index === 0 ? '#f5da4c' : index === 1 ? '#d9d9d9' : index === 2 ? '#d18e4b' : "#81d699" }}>
                       {row.number}
                     </StyledTableCell>
-                    <StyledTableCell component="td" >
+                    <StyledTableCell component="td" sx={{ borderColor: index === 0 ? '#f5da4c' : index === 1 ? '#d9d9d9' : index === 2 ? '#d18e4b' : "#81d699" }}>
                       {row.name}
                     </StyledTableCell>
-                    <StyledTableCell component="td" align="right">
+                    <StyledTableCell component="td" align="right" sx={{ borderColor: index === 0 ? '#f5da4c' : index === 1 ? '#d9d9d9' : index === 2 ? '#d18e4b' : "#81d699" }}>
                       {row.hours}
                     </StyledTableCell>
                   </TableRow>
@@ -98,6 +98,17 @@ const LeaderboardTable = () => {
               </TableBody>
             </Table>
           </TableContainer>
+          <Box sx={{ width: '100%', display: 'flex' }}>
+            <StyledRow component="td" sx={{ display: 'flex', backgroundColor: "#24a148", justifyContent: 'center', alignItems: 'center', pl: 2 }}>
+              256
+            </StyledRow>
+            <StyledRow component="td" sx={{ display: 'flex', backgroundColor: "#24a148", justifyContent: 'center', alignItems: 'center', flexGrow: 1, pr: 8 }} >
+              You
+            </StyledRow>
+            <StyledRow component="td" align="right" sx={{ display: 'flex', backgroundColor: "#24a148", justifyContent: 'center', alignItems: 'center', pr: 2 }}>
+              95
+            </StyledRow>
+          </Box>
         </Box>
       </Paper>
     </Grid>
@@ -107,6 +118,13 @@ const LeaderboardTable = () => {
 export default LeaderboardTable;
 
 const StyledTableCell = styled(TableCell)({
+  height: "50px",
+  color: "#fff",
+  fontSize: "20px",
+  fontWeight: 600,
+});
+
+const StyledRow = styled(Box)({
   height: "50px",
   color: "#fff",
   borderColor: "#81d699",
