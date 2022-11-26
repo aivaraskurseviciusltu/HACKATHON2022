@@ -37,7 +37,7 @@ const ReusableModal = (props) => {
 
   useEffect(() => {
     props.data.users.forEach(item => {
-      if(item.name === "Kim") {
+      if(item.name === "Aivaras") {
         setJoined(true);
       }
     })

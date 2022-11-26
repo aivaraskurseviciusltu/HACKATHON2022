@@ -2,7 +2,6 @@ import React from "react";
 import ReusableModal from "../Modal";
 import { TableContainer, TableBody, TableCell, TableHead, Table, TableRow, Grid, Paper, Typography, Box } from "@mui/material";
 
-
 const AllOpenChallenges = (props) => {
   const [open, setOpen] = React.useState(false);
   const [data, setData] = React.useState(props.data);
@@ -41,7 +40,7 @@ const AllOpenChallenges = (props) => {
   const handleAddUser = (user) => {
     setData((prevState) => {
         const newState = {...prevState};
-        newState.users.push(user)
+        newState.users.unshift(user)
         return newState;
     })
   }
@@ -89,33 +88,34 @@ const AllOpenChallenges = (props) => {
                 </TableRow>
               </TableHead>
                 <TableBody>
-                  {data.users.sort((a,b) => {
-                    const prev = a.learnings.reduce((accumulator, object) => {
-                      return accumulator + object.duration;
-                      }, 0)
-                      const next = b.learnings.reduce((accumulator, object) => {
+                    {data.users.sort((a,b) => {
+                      const prev = a.learnings.reduce((accumulator, object) => {
                         return accumulator + object.duration;
-                      }, 0)
-                      return next - prev;
-                  }).map((item, index) =>  
-                    <TableRow
-                      key={index}
-                      sx={{ '&:last-child td, &:last-child th': { border: 0 },
-                      '&:nth-child(odd) td': { backgroundColor: "#eeeeee" },
-                      textTransform: "none"
-                      }}
-                    >
-                      <TableCell component="td" >
-                        {`${item.name} ${item.surname}`}
-                      </TableCell>
-                      <TableCell component="td" >
-                        { item.learnings.reduce((accumulator, object) => {
-                            return accumulator + object.duration;
-                          }, 0)
-                        }
-                      </TableCell>
-                    </TableRow>
-                  )}
+                        }, 0)
+                        const next = b.learnings.reduce((accumulator, object) => {
+                          return accumulator + object.duration;
+                        }, 0)
+                        return next - prev;
+                    }).map((item, index) =>  
+                      <TableRow
+                        key={index}
+                        sx={{ '&:last-child td, &:last-child th': { border: 0 },
+                        '&:nth-child(odd) td': { backgroundColor: "#eeeeee" },
+                        textTransform: "none"
+                        }}
+                        className="listItem"
+                      >
+                        <TableCell component="td" >
+                          {`${item.name} ${item.surname}`}
+                        </TableCell>
+                        <TableCell component="td" >
+                          { item.learnings.reduce((accumulator, object) => {
+                              return accumulator + object.duration;
+                            }, 0)
+                          }
+                        </TableCell>
+                      </TableRow>
+                    )}
                 </TableBody>
               </Table>
             </TableContainer>
