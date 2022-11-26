@@ -1,1 +1,1 @@
-export const animationWidth = 56
+export const animationWidth = 75
