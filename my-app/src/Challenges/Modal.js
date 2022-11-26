@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import CloseIcon from '@mui/icons-material/Close';
-import React from "react";
+import React, { useEffect } from "react";
 import DenseTable from "./UserTable";
 
 const style = {
@@ -35,17 +35,20 @@ const ReusableModal = (props) => {
     props.closeModal();
   }
 
+  useEffect(() => {
+    props.data.users.forEach(item => {
+      if(item.name === "Kim") {
+        setJoined(true);
+      }
+    })
+  }, [props]);
+
+
   const handleAddUser = () => {
     const newUser = {
-      name: "Kim",
-      surname: "Jones",
+      name: "Aivaras",
+      surname: "Stanaitis",
       learnings: [
-        {
-          title: "Learning Typescript",
-          duration: 2,
-          startDate: "2022-11-20",
-          endDate: "2022-11-25",
-        },
       ],
     }
     props.onAddUser(newUser);

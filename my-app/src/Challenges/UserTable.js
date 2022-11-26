@@ -9,8 +9,8 @@ import Paper from '@mui/material/Paper';
 
 export default function DenseTable(props) {
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ maxWidth: 650 }} size="small" aria-label="a dense table">
+    <TableContainer component={Paper} sx={{ maxHeight: "290px", overflowY: "auto" }}>
+      <Table sx={{ maxWidth: 650, maxHeight: "500px", overflowY: "auto" }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow sx={{ backgroundColor: "#2196f3"}}>
           <TableCell sx={{ color: "#fff", fontWeight: 600 }}>No.</TableCell>
