@@ -126,11 +126,7 @@ function DashboardContent() {
             >
               Dashboard
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open} PaperProps={{ sx: { background: "#605E5E", color: "white", display: "flex", flexDirection: "column", justifyContent: "space-between" } }} >
