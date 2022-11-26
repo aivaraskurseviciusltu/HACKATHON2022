@@ -2,7 +2,7 @@ import AllClosedChallenges from "./AllChallenges/AllChallenges";
 
 const mockData = [
     {
-    title: "Java Developer Challenge",
+    title: "Challenge - 'Let's go !'",
     duration: 60,
     startDate: "2022-10-29",
     users: [
@@ -49,7 +49,7 @@ const mockData = [
     ],
     },
     {
-    title: "HR Challenge",
+    title: "Challenge - 'Lets see who's best'",
     duration: 30,
     startDate: "2022-12-29",
     users: [
