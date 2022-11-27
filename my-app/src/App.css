@@ -73,6 +73,7 @@
 }
 
 .modal-date-duration {
+  width: 100%;
   color: #fff;
   font-weight: 600;
   display:flex;
