@@ -27,13 +27,13 @@ function createData(number, name, hours) {
 const rows = [
   createData(1, "Alius", 21),
   createData(2, "Linas", 17),
-  createData(3, "Aivaras", 13),
+  createData(3, "Aivaras R.", 13),
   createData(4, "Mindaugas", 12),
   createData(5, "Nikolajus", 12),
   createData(6, "Donatas", 10),
   createData(7, "Zilvinas", 8),
   createData(8, "Aurimas", 7),
-  createData(9, "Aivaras", 4),
+  createData(9, "Aivaras K.", 4),
   createData(10, "Mantas", 4),
   createData(11, "Algirdas", 4),
   createData(12, "Audrius", 3),
@@ -274,7 +274,7 @@ const LeaderboardTable = () => {
                 pl: 2,
               }}
             >
-              16
+              9
             </StyledRow>
             <StyledRow
               component="td"
@@ -300,7 +300,7 @@ const LeaderboardTable = () => {
                 pr: 2,
               }}
             >
-              2
+              4
             </StyledRow>
           </Box>
         </Box>
