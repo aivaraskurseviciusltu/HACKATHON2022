@@ -15,7 +15,8 @@ const style = {
   bgcolor: "background.paper",
   p: "10px 20px",
   borderRadius: 2,
-  '&:focus': { outline: "none"}
+  '&:focus': { outline: "none"},
+  background: "linear-gradient(331deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 56%, rgba(36,161,72,1) 100%)",
 };
 
 

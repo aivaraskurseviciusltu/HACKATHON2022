@@ -79,7 +79,7 @@ const AllOpenChallenges = (props) => {
         </Grid>
         <Grid container sx={{ height: 192, p:2}}>
           <Grid item xs={8}>
-          <TableContainer component={Paper} sx={{ maxHeight: "160px", overflowY: "auto"}}>
+          <TableContainer component={Paper} sx={{ maxHeight: "160px", overflowY: "auto"}} id="tableBody">
               <Table sx={{ minWidth: "100%",  }} size="small" aria-label="a dense table">
               <TableHead>
                 <TableRow sx={{ backgroundColor: "#2196f3"}}>
