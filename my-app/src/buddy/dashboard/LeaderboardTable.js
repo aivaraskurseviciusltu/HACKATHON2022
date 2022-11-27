@@ -25,14 +25,14 @@ function createData(number, name, hours) {
 }
 
 const rows = [
-  createData(1, "Mindaugas", 27),
-  createData(2, "Algirdas", 18),
-  createData(3, "Arnas", 16),
-  createData(4, "Linas", 14),
-  createData(5, "Aivaras K.", 12),
-  createData(6, "Aivaras R.", 11),
-  createData(7, "Migle ", 8),
-  createData(8, "Vytautas", 6),
+  createData(1, "Mindaugas", 3),
+  createData(2, "Algirdas", 2),
+  createData(3, "Arnas", 2),
+  createData(4, "Linas", 2),
+  createData(5, "Aivaras K.", 2),
+  createData(6, "Aivaras R.", 1),
+  createData(7, "Migle ", 1),
+  createData(8, "Vytautas", 1),
 ];
 
 const defaultGoldMeal = {
@@ -292,7 +292,7 @@ const LeaderboardTable = () => {
                 pr: 2,
               }}
             >
-              2
+              0
             </StyledRow>
           </Box>
         </Box>

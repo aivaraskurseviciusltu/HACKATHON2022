@@ -12,13 +12,6 @@ const mockData = [
         learnings: [
           {
             title: "Learning JS",
-            duration: 2,
-            startDate: "2022-11-20",
-            endDate: "2022-11-25",
-
-          },
-          {
-            title: "Learning JS",
             duration: 1,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
@@ -30,20 +23,7 @@ const mockData = [
         name: "Audrius",
         surname: "Burkauskas",
         learnings: [
-          {
-            title: "Learning JS",
-            duration: 3,
-            startDate: "2022-11-20",
-            endDate: "2022-11-25",
-
-          },
-          {
-            title: "Learning JS",
-            duration: 3,
-            startDate: "2022-11-20",
-            endDate: "2022-11-25",
-
-          },
+          
         ],
       },
     ],
