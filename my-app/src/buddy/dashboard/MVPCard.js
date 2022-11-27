@@ -60,14 +60,14 @@ function MVPCard({ title, hours, cssClass, animation }) {
           color="white"
           sx={{ fontSize: 50, fontWeight: "800" }}
         >
-          {hours}
+          {Math.floor(hours/10)}
         </Typography>
         <Typography
           className={classes.timeType}
           color="white"
           sx={{ fontSize: 30, fontWeight: "800" }}
         >
-          hrs
+          pts
         </Typography>
       </Box>
     </Paper>

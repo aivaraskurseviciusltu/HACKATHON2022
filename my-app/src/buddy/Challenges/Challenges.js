@@ -2,7 +2,7 @@ import AllClosedChallenges from "./AllChallenges/AllChallenges";
 
 const mockData = [
   {
-    title: "Challenge - 'Let's go !'",
+    title: "Challenge - 'Warm Winter Welcome!'",
     duration: 60,
     startDate: "2022-10-29",
     users: [
@@ -19,7 +19,7 @@ const mockData = [
           },
           {
             title: "Learning JS",
-            duration: 6,
+            duration: 1,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
 
@@ -32,14 +32,14 @@ const mockData = [
         learnings: [
           {
             title: "Learning JS",
-            duration: 25,
+            duration: 3,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
 
           },
           {
             title: "Learning JS",
-            duration: 6,
+            duration: 3,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
 
@@ -49,7 +49,7 @@ const mockData = [
     ],
   },
   {
-    title: "Challenge - 'Lets see who's best'",
+    title: "Challenge - 'Lead by example'",
     duration: 30,
     startDate: "2022-12-29",
     users: [
@@ -60,32 +60,32 @@ const mockData = [
         ],
       },
       {
-        name: "Matas",
-        surname: "Dregva",
+        name: "Algirdas",
+        surname: "Rusteika",
         learnings: [
         ],
       },
       {
-        name: "Aurimas",
-        surname: "Zedelis",
+        name: "Migle",
+        surname: "Ankstutyte",
         learnings: [
         ],
       },
       {
-        name: "Kasparas",
+        name: "Vytautas Ginteris",
         surname: "Andrikys",
         learnings: [
         ],
       },
       {
-        name: "Marius",
+        name: "Arnas Siaudvytis",
         surname: "Gliaudelis",
         learnings: [
         ],
       },
       {
-        name: "Oleg",
-        surname: "Valujev",
+        name: "Mindaugas",
+        surname: "Ramanauskas",
         learnings: [
         ],
       },
