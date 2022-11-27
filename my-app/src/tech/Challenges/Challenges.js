@@ -54,12 +54,6 @@ const mockData = [
     startDate: "2022-12-29",
     users: [
       {
-        name: "Aivaras",
-        surname: "Kurservicius",
-        learnings: [
-        ],
-      },
-      {
         name: "Algirdas",
         surname: "Rusteika",
         learnings: [

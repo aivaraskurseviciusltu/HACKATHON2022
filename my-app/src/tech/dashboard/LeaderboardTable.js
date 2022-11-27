@@ -25,21 +25,21 @@ function createData(number, name, hours) {
 }
 
 const rows = [
-  createData(1, "Alius", 21*5),
-  createData(2, "Linas", 17*5),
-  createData(3, "Aivaras", 13*5),
-  createData(4, "Mindaugas", 12*5),
-  createData(5, "Nikolajus", 11*5),
-  createData(6, "Donatas", 10*5),
-  createData(7, "Zilvinas", 8*5),
-  createData(8, "Aurimas", 7*5),
-  createData(9, "Aivaras", 4*5),
-  createData(10, "Mantas", 4*5-1),
-  createData(11, "Algirdas", 4*5-2),
-  createData(12, "Audrius", 3*5),
-  createData(13, "Aurimas", 3*5-1),
-  createData(14, "Robertas", 3*5-2),
-  createData(15, "Jevgenij", 1*5),
+  createData(1, "Alius", 21),
+  createData(2, "Linas", 17),
+  createData(3, "Aivaras", 13),
+  createData(4, "Mindaugas", 12),
+  createData(5, "Nikolajus", 12),
+  createData(6, "Donatas", 10),
+  createData(7, "Zilvinas", 8),
+  createData(8, "Aurimas", 7),
+  createData(9, "Aivaras", 4),
+  createData(10, "Mantas", 4),
+  createData(11, "Algirdas", 4),
+  createData(12, "Audrius", 3),
+  createData(13, "Aurimas", 3),
+  createData(14, "Robertas", 3),
+  createData(15, "Jevgenij", 1),
 
 ];
 

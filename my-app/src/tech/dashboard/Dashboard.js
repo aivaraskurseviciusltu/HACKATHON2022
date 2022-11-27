@@ -207,7 +207,7 @@ function DashboardContent() {
                       <Grid item xs={4}>
                         <MVPCard
                           title="2021 MVP"
-                          hours={Math.floor(504/5)}
+                          hours="11"
                           cssClass={classes.card1}
                           animation={trophy}
                         />
@@ -215,7 +215,7 @@ function DashboardContent() {
                       <Grid item xs={4}>
                         <MVPCard
                           title="Q3 MVP"
-                          hours={Math.floor(224/5)}
+                          hours="5"
                           cssClass={classes.card2}
                           animation={arrowUp}
                         />
@@ -223,7 +223,7 @@ function DashboardContent() {
                       <Grid item xs={4}>
                         <MVPCard
                           title="July MVP"
-                          hours={Math.floor(102/5)}
+                          hours="2"
                           cssClass={classes.card3}
                           animation={fire}
                         />

@@ -1,6 +1,6 @@
 
 .card1{
-    background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.15), rgb(255, 217, 0, 0.8)), url("./assets/alius.jpeg");
+    background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.15), rgb(255, 217, 0, 0.8)), url("./assets/linas.jpeg");
 }
 
 .card2{
@@ -8,7 +8,7 @@
 }
 
 .card3{
-    background-image: linear-gradient(to bottom right,rgba(255,0,0, 0.3),rgba(255, 165, 0)), url("./assets/alius.jpeg");
+    background-image: linear-gradient(to bottom right,rgba(255,0,0, 0.3),rgba(255, 165, 0)), url("./assets/mindaugas.jpeg");
 }
 
 .card1, .card2, .card3{
