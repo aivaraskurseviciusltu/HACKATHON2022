@@ -1,14 +1,14 @@
 
 .card1{
-    background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.15), rgb(255, 217, 0, 0.8)), url("./assets/povilas.jpeg");
+    background-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.15), rgb(255, 217, 0, 0.8)), url("./assets/mindaugas.jpeg");
 }
 
 .card2{
-    background-image: linear-gradient(to bottom right,rgba(36, 161, 72, 0.5),rgba(0, 178, 239, 0.5)), url("./assets/ana.jpeg");
+    background-image: linear-gradient(to bottom right,rgba(36, 161, 72, 0.5),rgba(0, 178, 239, 0.5)), url("../images/Aivaras.jpeg");
 }
 
 .card3{
-    background-image: linear-gradient(to bottom right,rgba(255,0,0, 0.3),rgba(255, 165, 0)), url("./assets/jonas.jpeg");
+    background-image: linear-gradient(to bottom right,rgba(255,0,0, 0.3),rgba(255, 165, 0)), url("./assets/linas.jpeg");
 }
 
 .card1, .card2, .card3{
