@@ -5,7 +5,7 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import HistoryRoundedIcon from "@mui/icons-material/HistoryRounded";
 import CrisisAlertRoundedIcon from "@mui/icons-material/CrisisAlertRounded";
-
+import InterpreterModeIcon from '@mui/icons-material/InterpreterMode';
 import { Link } from "react-router-dom";
 import { Diversity3, Info } from "@mui/icons-material";
 
@@ -40,6 +40,12 @@ export const mainListItems = (
         <Diversity3 sx={{ color: "white" }} />
       </ListItemIcon>
       <ListItemText primary="Buddy" />
+    </ListItemButton>
+    <ListItemButton component={Link} to="/tech">
+      <ListItemIcon>
+        <InterpreterModeIcon sx={{ color: "white" }} />
+      </ListItemIcon>
+      <ListItemText primary="Tech" />
     </ListItemButton>
   </React.Fragment>
 );
