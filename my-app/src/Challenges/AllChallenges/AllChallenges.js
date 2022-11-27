@@ -177,7 +177,7 @@ const AllOpenChallenges = (props) => {
                   >{ joined ? "Joined" : "Join" }</Button>
               </Box>
               <Box sx={{ display: "flex", alignSelf: "end" }}>
-                {calcStart() ? `Start on: ${data.startDate}` : "Status: In Progess"}
+                {calcStart() ? `Start on: ${data.startDate}` : "Status: In Progress"}
               </Box>
             </Box>
           </Grid>
