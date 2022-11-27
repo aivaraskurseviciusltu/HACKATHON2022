@@ -3,7 +3,7 @@ import AllClosedChallenges from "./AllChallenges/AllChallenges";
 const mockData = [
   {
     title: "Challenge - 'Let's go !'",
-    duration: 60,
+    duration: 56,
     startDate: "2022-10-29",
     users: [
       {

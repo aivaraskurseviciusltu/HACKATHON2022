@@ -79,7 +79,7 @@ const ReusableModal = (props) => {
           <h3 className='modal-title'>{props.data.title}</h3>
           <div className='modal-date-duration'>
             <p>Start date: {props.data.startDate}</p>
-            <p>Duration: {props.data.duration}</p>
+            <p>Duration: {props.data.duration} Days</p>
           </div>
           <DenseTable users={props.data.users} inProgress={props.inProgress}/>
           {calcStart() && <button onClick={handleAddUser} className={`btn ${joined && 'disabled'} ${effect && 'pulse'}`} disabled={joined}>Join</button>}

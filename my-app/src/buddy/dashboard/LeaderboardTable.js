@@ -266,7 +266,7 @@ const LeaderboardTable = () => {
                 pl: 2,
               }}
             >
-              9
+              5
             </StyledRow>
             <StyledRow
               component="td"
@@ -292,7 +292,7 @@ const LeaderboardTable = () => {
                 pr: 2,
               }}
             >
-              0
+              2
             </StyledRow>
           </Box>
         </Box>

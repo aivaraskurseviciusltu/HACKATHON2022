@@ -3,7 +3,7 @@ import AllClosedChallenges from "./AllChallenges/AllChallenges";
 const mockData = [
   {
     title: "Challenge - 'The best way out is always through.'",
-    duration: 60,
+    duration: 50,
     startDate: "2022-10-29",
     users: [
       {

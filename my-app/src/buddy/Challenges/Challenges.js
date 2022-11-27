@@ -3,7 +3,7 @@ import AllClosedChallenges from "./AllChallenges/AllChallenges";
 const mockData = [
   {
     title: "Challenge - 'Warm Winter Welcome!'",
-    duration: 60,
+    duration: 48,
     startDate: "2022-10-29",
     users: [
       {
