@@ -164,7 +164,7 @@ const LeaderboardTable = () => {
           </Typography>
           <TableContainer
             component={Paper}
-            sx={{ boxShadow: "none", maxHeight: "645px", overflowY: "auto" }}
+            sx={{ boxShadow: "none", maxHeight: "675px", overflowY: "auto" }}
           >
             <Table
               stickyHeader
