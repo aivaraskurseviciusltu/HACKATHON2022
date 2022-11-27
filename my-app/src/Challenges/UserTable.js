@@ -17,7 +17,7 @@ export default function DenseTable(props) {
               <TableCell sx={{ color: "#fff", fontWeight: 600}}>Name</TableCell>
               {
                 props.inProgress && 
-              <TableCell sx={{ color: "#fff", fontWeight: 600}}>Time Spent</TableCell>
+              <TableCell sx={{ color: "#fff", fontWeight: 600}}>Score</TableCell>
               } 
           </TableRow>
         </TableHead>

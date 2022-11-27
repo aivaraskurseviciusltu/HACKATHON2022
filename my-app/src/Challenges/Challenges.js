@@ -96,7 +96,7 @@ const mockData = [
 const Challenges = () => {
   return (
     mockData.map((item, index) =>
-      <AllClosedChallenges data={item} key={index} color={index === 0 ? 'violet' : 'yellow'} />
+      <AllClosedChallenges data={item} key={index} color={index === 0 ? 'violet' : 'yellow'}/>
     )
   );
 };

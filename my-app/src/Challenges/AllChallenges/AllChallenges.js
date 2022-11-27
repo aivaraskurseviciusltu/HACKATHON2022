@@ -7,6 +7,7 @@ const AllOpenChallenges = (props) => {
   const [open, setOpen] = React.useState(false);
   const [data, setData] = React.useState(props.data);
   const [progress, setProgress] = React.useState(false);
+  const [joined, setJoined] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -25,7 +26,12 @@ const AllOpenChallenges = (props) => {
     if (!calcStart()) {
       setProgress(true);
     }
-  }, [props.data]);
+    props.data.users.forEach(item => {
+      if(item.surname === "Kursevicius") {
+        setJoined(true);
+      }
+    })
+  }, [props.data, data]);
 
   const calcDiff = () => {
     const startDate = new Date(data.startDate);
@@ -35,13 +41,19 @@ const AllOpenChallenges = (props) => {
 
     let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
-    return `Remaining Days: ${Math.floor(Difference_In_Days)}`;
+    return `Remaining Days: ${Math.floor(Difference_In_Days)} Days`;
   }
 
   const handleAddUser = (user) => {
+    const newUser = {
+      name: "Aivaras",
+      surname: "Kursevicius",
+      learnings: [
+      ],
+    }
     setData((prevState) => {
       const newState = { ...prevState };
-      newState.users.unshift(user)
+      newState.users.unshift(newUser)
       return newState;
     })
   }
@@ -81,7 +93,7 @@ const AllOpenChallenges = (props) => {
               id="tableTitle"
               component="p">
               {
-                calcStart() ? `Challenge Duration: ${data.duration}` : calcDiff()
+                calcStart() ? `Challenge Duration: ${data.duration} Days` : calcDiff()
               }
             </Typography>
           </Grid>
@@ -101,7 +113,7 @@ const AllOpenChallenges = (props) => {
                       color: "#fff", fontWeight: 700, borderColor:
                         props.color === 'violet'
                           ? "#7d12ff" : "#db254e"
-                    }}>Time Spent</TableCell>
+                    }}>Score</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -149,7 +161,19 @@ const AllOpenChallenges = (props) => {
           <Grid item xs={2.5}>
             <Box sx={{ display: "flex", flexDirection: "column", height: "100%", alignItems: "center", justifyContent: props.color === 'violet' ? "flex-end" : "space-between", fontWeight: 600 }}>
               <Box sx={{ display: props.color === 'violet' ? "none" : "flex", flexGrow: 1, justifyContent: 'center', alignItems: 'center', pl: 3 }}>
-                <Button variant="outlined" sx={{ width: "10vw", height: '70%', color: '#fff', fontWeight: 700, border: "4px solid #ff3562", fontSize: '26px', '&:hover': { border: "4px solid #ff3562", background: "#ff3562" } }}>Join</Button>
+                <Button 
+                variant="outlined" 
+                sx={{ 
+                  width: "10vw",
+                  height: '70%', 
+                  color: '#fff', 
+                  fontWeight: 700, 
+                  border: "4px solid #ff3562", 
+                  fontSize: '26px', 
+                  '&:hover': { border: "4px solid #ff3562", background: "#ff3562" } }}
+                  onClick={() => handleAddUser()}
+                  disabled={joined}
+                  >{ joined ? "Joined" : "Join" }</Button>
               </Box>
               <Box sx={{ display: "flex", alignSelf: "end" }}>
                 {calcStart() ? `Start on: ${data.startDate}` : "Status: In Progess"}
@@ -157,7 +181,7 @@ const AllOpenChallenges = (props) => {
             </Box>
           </Grid>
         </Grid>
-        {open && (
+        {(open && !calcStart()) && (
           <ReusableModal open={open} data={data} handleClose={handleClose} onAddUser={handleAddUser} closeModal={closeModal} inProgress={progress} />
         )}
       </Paper>
