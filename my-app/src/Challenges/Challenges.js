@@ -1,7 +1,7 @@
 import AllClosedChallenges from "./AllChallenges/AllChallenges";
 
 const mockData = [
-    {
+  {
     title: "Challenge - 'Let's go !'",
     duration: 60,
     startDate: "2022-10-29",
@@ -15,14 +15,14 @@ const mockData = [
             duration: 2,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
-            
+
           },
           {
             title: "Learning JS",
             duration: 6,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
-            
+
           },
         ],
       },
@@ -35,20 +35,20 @@ const mockData = [
             duration: 25,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
-            
+
           },
           {
             title: "Learning JS",
             duration: 6,
             startDate: "2022-11-20",
             endDate: "2022-11-25",
-            
+
           },
         ],
       },
     ],
-    },
-    {
+  },
+  {
     title: "Challenge - 'Lets see who's best'",
     duration: 30,
     startDate: "2022-12-29",
@@ -95,8 +95,8 @@ const mockData = [
 
 const Challenges = () => {
   return (
-    mockData.map((item, index) => 
-        <AllClosedChallenges data={item} key={index}/>
+    mockData.map((item, index) =>
+      <AllClosedChallenges data={item} key={index} color={index === 0 ? 'pink' : 'yellow'} />
     )
   );
 };
