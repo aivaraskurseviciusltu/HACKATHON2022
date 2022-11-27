@@ -18,7 +18,7 @@ import goldMedal from "./assets/lottie/gold-medal.json";
 import silverMedal from "./assets/lottie/silver-medal.json";
 import bronzeMedal from "./assets/lottie/bronze-medal.json";
 import classes from "./LeaderboardTable.module.css";
-import {animationWidth} from '../utils/Constants'
+import { animationWidth } from '../utils/Constants'
 
 function createData(number, name, hours) {
   return { number, name, hours };
@@ -111,192 +111,192 @@ const renderLeaderboardSwitch = (param) => {
 const LeaderboardTable = () => {
   return (
     <Grid item xs={4}>
-      <Paper
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          maxHeight: "905px",
-          background:
-            "linear-gradient(331deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 56%, rgba(36,161,72,1) 100%)",
-        }}
-        className="border-custom"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <Box>
-          <Typography
-            sx={{
-              height: "60px",
-              textAlign: "left",
-              fontWeight: 700,
-              textTransform: "none",
-              color: "white",
-              p: 2,
-            }}
-            variant="h5"
-            id="tableTitle"
-          >
-            Top Learners - 2022
-          </Typography>
-          <TableContainer
-            component={Paper}
-            sx={{ boxShadow: "none", maxHeight: "675px", overflowY: "auto" }}
-          >
-            <Table
-              stickyHeader
-              sx={{ minWidth: "100%" }}
-              size="small"
-              aria-label="a dense table"
+      <Box sx={{ height: '673px' }} className="gradient">
+        <Paper
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "calc(100% - 10px)",
+            left: 5,
+            top: 5,
+            background:
+              "linear-gradient(331deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 56%, rgba(36,161,72,1) 100%)",
+          }}
+          className="border-custom"
+        >
+          <Box>
+            <Typography
+              sx={{
+                height: "60px",
+                textAlign: "left",
+                fontWeight: 700,
+                textTransform: "none",
+                color: "white",
+                p: 2,
+              }}
+              variant="h5"
+              id="tableTitle"
             >
-              <TableHead>
-                <TableRow sx={{ backgroundColor: "#24a148", mt: "60px" }}>
-                  <TableCell
-                    sx={{
-                      color: "#fff",
-                      fontWeight: 700,
-                      borderColor: "#81d699",
-                      backgroundColor: "#24a148",
-                    }}
-                  >
-                    Number
-                  </TableCell>
-                  <TableCell
-                    sx={{
-                      color: "#fff",
-                      fontWeight: 700,
-                      borderColor: "#81d699",
-                      backgroundColor: "#24a148",
-                    }}
-                  >
-                    Name
-                  </TableCell>
-                  <TableCell
-                    sx={{
-                      color: "#fff",
-                      fontWeight: 700,
-                      borderColor: "#81d699",
-                      backgroundColor: "#24a148",
-                    }}
-                    align="right"
-                  >
-                    Score
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows
-                  .sort((a, b) => a.number - b.number)
-                  .map((row, index) => (
-                    <TableRow
-                      key={row.number}
+              Top Learners - 2022
+            </Typography>
+            <TableContainer
+              component={Paper}
+              sx={{ boxShadow: "none", maxHeight: "675px", overflowY: "auto" }}
+            >
+              <Table
+                stickyHeader
+                sx={{ minWidth: "100%" }}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead>
+                  <TableRow sx={{ backgroundColor: "#24a148", mt: "60px" }}>
+                    <TableCell
                       sx={{
-                        background:
-                          index === 0
-                            ? "linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(255,215,0,0.8) 100%)"
-                            : index === 1
-                            ? "linear-gradient(90deg, rgba(152,152,152,1) 0%, rgba(205,205,205,0.8) 100%)"
-                            : index === 2
-                            ? "linear-gradient(90deg, rgba(193,108,24,1) 0%, rgba(205,127,50,0.6) 100%)"
-                            : "linear-gradient(90deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 100%)",
-                        "&:last-child td, &:last-child th": { border: 0 },
-                        textTransform: "none",
+                        color: "#fff",
+                        fontWeight: 700,
+                        borderColor: "#81d699",
+                        backgroundColor: "#24a148",
                       }}
                     >
-                      <StyledTableCell
-                        component="td"
+                      Number
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        color: "#fff",
+                        fontWeight: 700,
+                        borderColor: "#81d699",
+                        backgroundColor: "#24a148",
+                      }}
+                    >
+                      Name
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        color: "#fff",
+                        fontWeight: 700,
+                        borderColor: "#81d699",
+                        backgroundColor: "#24a148",
+                      }}
+                      align="right"
+                    >
+                      Score
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows
+                    .sort((a, b) => a.number - b.number)
+                    .map((row, index) => (
+                      <TableRow
+                        key={row.number}
                         sx={{
-                          borderColor:
+                          background:
                             index === 0
-                              ? "#f5da4c"
+                              ? "linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(255,215,0,0.8) 100%)"
                               : index === 1
-                              ? "#d9d9d9"
-                              : index === 2
-                              ? "#d18e4b"
-                              : "#81d699",
+                                ? "linear-gradient(90deg, rgba(152,152,152,1) 0%, rgba(205,205,205,0.8) 100%)"
+                                : index === 2
+                                  ? "linear-gradient(90deg, rgba(193,108,24,1) 0%, rgba(205,127,50,0.6) 100%)"
+                                  : "linear-gradient(90deg, rgba(36,161,72,1) 0%, rgba(100,232,138,1) 100%)",
+                          "&:last-child td, &:last-child th": { border: 0 },
+                          textTransform: "none",
                         }}
                       >
-                        {renderLeaderboardSwitch(row.number)}
-                      </StyledTableCell>
-                      <StyledTableCell
-                        component="td"
-                        sx={{
-                          borderColor:
-                            index === 0
-                              ? "#f5da4c"
-                              : index === 1
-                              ? "#d9d9d9"
-                              : index === 2
-                              ? "#d18e4b"
-                              : "#81d699",
-                        }}
-                      >
-                        {row.name}
-                      </StyledTableCell>
-                      <StyledTableCell
-                        component="td"
-                        align="right"
-                        sx={{
-                          borderColor:
-                            index === 0
-                              ? "#f5da4c"
-                              : index === 1
-                              ? "#d9d9d9"
-                              : index === 2
-                              ? "#d18e4b"
-                              : "#81d699",
-                        }}
-                      >
-                        {row.hours}
-                      </StyledTableCell>
-                    </TableRow>
-                  ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <Box sx={{ width: "100%", display: "flex" }}>
-            <StyledRow
-              component="td"
-              sx={{
-                display: "flex",
-                backgroundColor: "#24a148",
-                justifyContent: "center",
-                alignItems: "center",
-                pl: 2,
-              }}
-            >
-              5
-            </StyledRow>
-            <StyledRow
-              component="td"
-              sx={{
-                display: "flex",
-                backgroundColor: "#24a148",
-                justifyContent: "center",
-                alignItems: "center",
-                flexGrow: 1,
-                pr: 8,
-              }}
-            >
-              You
-            </StyledRow>
-            <StyledRow
-              component="td"
-              align="right"
-              sx={{
-                display: "flex",
-                backgroundColor: "#24a148",
-                justifyContent: "center",
-                alignItems: "center",
-                pr: 2,
-              }}
-            >
-              2
-            </StyledRow>
+                        <StyledTableCell
+                          component="td"
+                          sx={{
+                            borderColor:
+                              index === 0
+                                ? "#f5da4c"
+                                : index === 1
+                                  ? "#d9d9d9"
+                                  : index === 2
+                                    ? "#d18e4b"
+                                    : "#81d699",
+                          }}
+                        >
+                          {renderLeaderboardSwitch(row.number)}
+                        </StyledTableCell>
+                        <StyledTableCell
+                          component="td"
+                          sx={{
+                            borderColor:
+                              index === 0
+                                ? "#f5da4c"
+                                : index === 1
+                                  ? "#d9d9d9"
+                                  : index === 2
+                                    ? "#d18e4b"
+                                    : "#81d699",
+                          }}
+                        >
+                          {row.name}
+                        </StyledTableCell>
+                        <StyledTableCell
+                          component="td"
+                          align="right"
+                          sx={{
+                            borderColor:
+                              index === 0
+                                ? "#f5da4c"
+                                : index === 1
+                                  ? "#d9d9d9"
+                                  : index === 2
+                                    ? "#d18e4b"
+                                    : "#81d699",
+                          }}
+                        >
+                          {row.hours}
+                        </StyledTableCell>
+                      </TableRow>
+                    ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <Box sx={{ width: "100%", display: "flex" }}>
+              <StyledRow
+                component="td"
+                sx={{
+                  display: "flex",
+                  backgroundColor: "#24a148",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  pl: 2,
+                }}
+              >
+                5
+              </StyledRow>
+              <StyledRow
+                component="td"
+                sx={{
+                  display: "flex",
+                  backgroundColor: "#24a148",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexGrow: 1,
+                  pr: 8,
+                }}
+              >
+                You
+              </StyledRow>
+              <StyledRow
+                component="td"
+                align="right"
+                sx={{
+                  display: "flex",
+                  backgroundColor: "#24a148",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  pr: 2,
+                }}
+              >
+                2
+              </StyledRow>
+            </Box>
           </Box>
-        </Box>
-      </Paper>
+        </Paper>
+      </Box>
     </Grid>
   );
 };

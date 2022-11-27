@@ -1,31 +1,9 @@
 .border-custom{
 	position: relative;
-    width: 100%;
 	text-transform: uppercase;
 	color: #1670f0;
 	overflow: hidden;
-}
-
-/* .border-custom:before{
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	bottom: 5px;
-	content: '';
-	width: 50%;
-	background: rgba(255,255,255,0.05);
-} */
-
-.border-custom span:nth-child(1){
-	z-index: 1000;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	background: linear-gradient(to right, #2196f3, #bbdefb);
-	animation: animate1 2s linear infinite;
-}
+} 
 
 @keyframes animate1{
 	0%{
@@ -37,61 +15,6 @@
 	}
 }
 
-.border-custom span:nth-child(2){
-	z-index: 1000;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 5px;
-	height: 100%;
-	background: linear-gradient(to bottom, #2196f3, #bbdefb);
-	animation: animate2 2s linear infinite;
-	animation-delay: 1s;
-}
-
-@keyframes animate2{
-	0%{
-		transform: translateY(-100%);
-	}
-
-	100%{
-		transform: translateY(100%);
-	}
-}
-
-.border-custom span:nth-child(3){
-	z-index: 1000;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	background: linear-gradient(to left, #2196f3, #bbdefb);
-	animation: animate3 2s linear infinite;
-}
-
-@keyframes animate3{
-	0%{
-		transform: translateX(100%);
-	}
-
-	100%{
-		transform: translateX(-100%);
-	}
-}
-
-.border-custom span:nth-child(4){
-	z-index: 1000;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 5px;
-	height: 100%;
-	background: linear-gradient(to top, #2196f3, #bbdefb);
-	animation: animate4 2s linear infinite;
-	animation-delay: 1s;
-}
-
 @keyframes animate4{
 	0%{
 		transform: translateY(100%);
@@ -100,4 +23,18 @@
 	100%{
 		transform: translateY(-100%);
 	}
+}
+
+.gradient {
+    transform: translate(-4px, -4px); /*Now we use a negative translation to center this element in terms of the card. We use half of the extra 8px we gave it for width and height.*/
+    background: linear-gradient(60deg, #d8ffe1, #5f86f2, #24a148, #5FF2CD, #5f94f2, #f2cb5f) 0 50%; /*You can use a gradient of your choosing. I generated this one online.*/
+    background-size: 300% 300%; /*Setting the background size to a large number since we will be animating the background position via keyframes.*/
+    animation:  gradient-animation 2.5s alternate infinite; /*Applying the keyframe animation.*/
+    border-radius: 8px; /*Rounds the corners a little.*/
+}
+
+@keyframes gradient-animation {
+    50%{
+        background-position: 100% 50%;
+    }
 }
