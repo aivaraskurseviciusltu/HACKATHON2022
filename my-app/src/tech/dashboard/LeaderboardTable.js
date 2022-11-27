@@ -25,36 +25,22 @@ function createData(number, name, hours) {
 }
 
 const rows = [
-  createData(1, "Edita", 349),
-  createData(2, "Jonas", 345),
-  createData(3, "Elvyra", 295),
-  createData(4, "Odeta", 278),
-  createData(5, "Povilas", 273),
-  createData(6, "Laimonas", 269),
-  createData(7, "Audrius", 261),
-  createData(8, "Alius", 254),
-  createData(9, "Antanas", 249),
-  createData(10, "Aivaras", 230),
-  createData(11, "Juozas", 219),
-  createData(12, "Reda", 218),
-  createData(13, "Ignas", 217),
-  createData(14, "Guoda", 210),
-  createData(15, "Vytenis", 207),
-  createData(16, "Aivaras", 201),
-  createData(17, "Mykolas", 198),
-  createData(18, "Zaza", 192),
-  createData(19, "Ugniius", 183),
-  createData(20, "Aldona", 179),
-  createData(21, "Neringa", 174),
-  createData(22, "Adomas", 166),
-  createData(23, "Kristijonas", 150),
-  createData(24, "Kajus", 145),
-  createData(25, "Rokas", 139),
-  createData(26, "Vytautas", 133),
-  createData(27, "Eimantas", 127),
-  createData(28, "Oleg", 119),
-  createData(29, "Nojus", 113),
-  createData(30, "Egle", 111),
+  createData(1, "Alius", 21*5),
+  createData(2, "Linas", 17*5),
+  createData(3, "Aivaras", 13*5),
+  createData(4, "Mindaugas", 12*5),
+  createData(5, "Nikolajus", 11*5),
+  createData(6, "Donatas", 10*5),
+  createData(7, "Zilvinas", 8*5),
+  createData(8, "Aurimas", 7*5),
+  createData(9, "Aivaras", 4*5),
+  createData(10, "Mantas", 4*5-1),
+  createData(11, "Algirdas", 4*5-2),
+  createData(12, "Audrius", 3*5),
+  createData(13, "Aurimas", 3*5-1),
+  createData(14, "Robertas", 3*5-2),
+  createData(15, "Jevgenij", 1*5),
+
 ];
 
 const defaultGoldMeal = {
@@ -288,7 +274,7 @@ const LeaderboardTable = () => {
                 pl: 2,
               }}
             >
-              256
+              16
             </StyledRow>
             <StyledRow
               component="td"
@@ -314,7 +300,7 @@ const LeaderboardTable = () => {
                 pr: 2,
               }}
             >
-              95
+              2
             </StyledRow>
           </Box>
         </Box>

@@ -2,7 +2,7 @@ import AllClosedChallenges from "./AllChallenges/AllChallenges";
 
 const mockData = [
   {
-    title: "Challenge - 'Let's go !'",
+    title: "Challenge - 'The best way out is always through.'",
     duration: 60,
     startDate: "2022-10-29",
     users: [
@@ -49,43 +49,43 @@ const mockData = [
     ],
   },
   {
-    title: "Challenge - 'Lets see who's best'",
+    title: "Challenge - 'There is a way to do it better - find it.'",
     duration: 30,
     startDate: "2022-12-29",
     users: [
       {
         name: "Aivaras",
-        surname: "Stanaitis",
+        surname: "Kurservicius",
         learnings: [
         ],
       },
       {
-        name: "Matas",
-        surname: "Dregva",
+        name: "Algirdas",
+        surname: "Rusteika",
+        learnings: [
+        ],
+      },
+      {
+        name: "Alius",
+        surname: "Petraska",
+        learnings: [
+        ],
+      },
+      {
+        name: "Audrius",
+        surname: "Ramanauskas",
         learnings: [
         ],
       },
       {
         name: "Aurimas",
-        surname: "Zedelis",
+        surname: "Jocys",
         learnings: [
         ],
       },
       {
-        name: "Kasparas",
-        surname: "Andrikys",
-        learnings: [
-        ],
-      },
-      {
-        name: "Marius",
-        surname: "Gliaudelis",
-        learnings: [
-        ],
-      },
-      {
-        name: "Oleg",
-        surname: "Valujev",
+        name: "Aurimas",
+        surname: "Zaleckas",
         learnings: [
         ],
       },
