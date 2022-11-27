@@ -1,8 +1,9 @@
 import React from 'react'
+import Dashboard from "./dashboard/Dashboard";
 
 function Buddy() {
   return (
-    <div>buddy</div>
+    <Dashboard/>
   )
 }
 
