@@ -67,7 +67,7 @@ function MVPCard({ title, hours, cssClass, animation }) {
           color="white"
           sx={{ fontSize: 30, fontWeight: "800" }}
         >
-          hrs
+          pts
         </Typography>
       </Box>
     </Paper>
