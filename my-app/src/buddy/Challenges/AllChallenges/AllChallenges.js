@@ -66,6 +66,7 @@ const AllOpenChallenges = (props) => {
           flexDirection: "column",
           height: 240,
           color: "#fff",
+          cursor: !progress ? "default" : "pointer",
           background: props.color === 'violet' ? 'linear-gradient(125deg, rgba(125,18,255,1) 0%, rgba(125,18,255,0.3604035364145658) 100%)' : 'linear-gradient(90deg, rgba(255,84,122,1) 0%, rgba(255,84,122,0.6) 100%)',
           boxShadow: props.color === 'violet' ? "0px 0px 5px 4px #7d12ff" : "0px 0px 5px 3px #ff3562",
           '&:hover': {
