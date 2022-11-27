@@ -17,32 +17,19 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { mainListItems } from "./listItems";
-import Button from '@mui/material/Button'
+import Button from "@mui/material/Button";
 import MVPCard from "./MVPCard";
-import classes from "./MVPCard.module.css"
-import theme from '../styles/theme'
-import logo from '../images/logo.svg'
+import classes from "./MVPCard.module.css";
+import theme from "../styles/theme";
+import logo from "../images/logo.svg";
 import UserInfo from "./UserInfo";
 import Challenges from "../Challenges/Challenges";
 import LeaderboardTable from "./LeaderboardTable";
-
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import fire from "./assets/lottie/fire.json";
+import trophy from "./assets/lottie/trophy.json";
+import arrowUp from "./assets/lottie/rocket.json";
+import buttonClasses from "./Dashboard.module.css";
+import backgroundImg from './assets/background.png';
 
 const drawerWidth = 240;
 
@@ -98,113 +85,157 @@ function DashboardContent() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-        <AppBar position="absolute" open={open}>
-          <Toolbar
-            sx={{
-              pr: "24px", // keep right padding when drawer closed
-              backgroundColor: "#000"
-            }}
-          >
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              onClick={toggleDrawer}
-              sx={{
-                marginRight: "36px",
-                ...(open && { display: "none" }),
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Box sx={{ display: 'flex', flexGrow: 1, gap: 1, alignItems: 'center' }}>
-              <img alt='' src={logo} height="48px" />
-              <Typography
-                component="h1"
-                variant="h6"
-                color="inherit"
-                noWrap
-              >
-                Your Learning Challenges
-              </Typography>
-            </Box>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-        <Drawer variant="permanent" open={open} PaperProps={{ sx: { background: "#262626", color: "white", display: "flex", flexDirection: "column", justifyContent: "space-between" } }} >
-          <Box>
+        <Box sx={{ display: "flex" }}>
+          <CssBaseline />
+          <AppBar position="absolute" open={open}>
             <Toolbar
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-end",
-                px: [1],
+                pr: "24px", // keep right padding when drawer closed
+                backgroundColor: "#000",
               }}
             >
-              <IconButton onClick={toggleDrawer}>
-                <ChevronLeftIcon sx={{ color: "white" }} />
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                onClick={toggleDrawer}
+                sx={{
+                  marginRight: "36px",
+                  ...(open && { display: "none" }),
+                }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexGrow: 1,
+                  gap: 1,
+                  alignItems: "center",
+                }}
+              >
+                <img alt="" src={logo} height="48px" />
+                <Typography component="h1" variant="h6" color="inherit" noWrap>
+                  Your Learning Challenges
+                </Typography>
+              </Box>
+              <IconButton color="inherit">
+                <Badge badgeContent={4} color="secondary">
+                  <NotificationsIcon />
+                </Badge>
               </IconButton>
             </Toolbar>
-            <UserInfo display={open} />
-            <Divider sx={{ borderColor: "rgba(180, 180, 180,  0.22)" }} />
-            <List component="nav">
-              {mainListItems}
-              <Divider sx={{ my: 1, borderColor: "rgba(180, 180, 180,  0.22)" }} />
-            </List>
-          </Box>
-          <Box sx={{ py: 10 }}>
-            <Button variant="contained" color="warning" sx={{ fontWeight: 700 }}>
-              {open ? <div>Create <br /> new challenge  </div> : "+"}
-            </Button>
-          </Box>
-        </Drawer>
-        <Box
-          component="main"
-          sx={{
-            backgroundColor: "#484848",
-            flexGrow: 1,
-            height: "100vh",
-            overflow: "auto",
-          }}
-        >
-          <Toolbar />
-          <Container maxWidth="100%" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={2} >
-              {/* challenge */}
-              <Grid item xs={8}>
-                <Grid container spacing={2} flexDirection="column">
-                  <Grid item xs={12}>
-                    <Grid container spacing={3}>
-                      <Challenges />
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <Grid item xs={12} sx={{ paddingTop: "12px" }}>
-                  <Grid container spacing={2}>
-                    <Grid item xs={4}>
-                      <MVPCard title="2022 MVP" hours="5040" cssClass={classes.card1} />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <MVPCard title="Q3 MVP" hours="2011" cssClass={classes.card2} />
-                    </Grid>
-                    <Grid item xs={4}>
-                      <MVPCard title="July MVP" hours="539" cssClass={classes.card3} />
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <LeaderboardTable />
+          </AppBar>
+          <Drawer
+            variant="permanent"
+            open={open}
+            PaperProps={{
+              sx: {
+                background: "#262626",
+                color: "white",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              },
+            }}
+          >
+            <Box>
+              <Toolbar
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-end",
+                  px: [1],
+                }}
+              >
+                <IconButton onClick={toggleDrawer}>
+                  <ChevronLeftIcon sx={{ color: "white" }} />
+                </IconButton>
+              </Toolbar>
+              <UserInfo display={open} />
+              <Divider sx={{ borderColor: "rgba(180, 180, 180,  0.22)" }} />
+              <List component="nav">
+                {mainListItems}
+                <Divider
+                  sx={{ my: 1, borderColor: "rgba(180, 180, 180,  0.22)" }}
+                />
+              </List>
+            </Box>
+            <Box sx={{ py: 10 }}>
+              <Button
+                className={buttonClasses.createButton}
+                variant="contained"
+                color="warning"
+                sx={{ fontWeight: 700 }}
+              >
+                {open ? (
+                  <div>
+                    Create <br /> new challenge{" "}
+                  </div>
+                ) : (
+                  "+"
+                )}
+              </Button>
+            </Box>
+          </Drawer>
 
-            </Grid>
-          </Container>
+          <Box
+            component="main"
+            // style={{backgroundImage: backgroundImg}}
+            sx={{
+              background: `url(${backgroundImg})`,
+              // backgroundColor: "#484848",
+              flexGrow: 1,
+              height: "100vh",
+              overflow: "auto",
+            }}
+          >
+            <Toolbar />
+            <Container maxWidth="100%" sx={{ mt: 4, mb: 4 }}>
+              <Grid container spacing={2}>
+                {/* challenge */}
+                <Grid item xs={8}>
+                  <Grid container spacing={2} flexDirection="column">
+                    <Grid item xs={12}>
+                      <Grid container spacing={3}>
+                        <Challenges />
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                  <Grid item xs={12} sx={{ paddingTop: "12px" }}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={4}>
+                        <MVPCard
+                          title="2021 MVP"
+                          hours="504"
+                          cssClass={classes.card1}
+                          animation={trophy}
+                        />
+                      </Grid>
+                      <Grid item xs={4}>
+                        <MVPCard
+                          title="Q3 MVP"
+                          hours="224"
+                          cssClass={classes.card2}
+                          animation={arrowUp}
+                        />
+                      </Grid>
+                      <Grid item xs={4}>
+                        <MVPCard
+                          title="July MVP"
+                          hours="102"
+                          cssClass={classes.card3}
+                          animation={fire}
+                        />
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Grid>
+                <LeaderboardTable />
+              </Grid>
+            </Container>   
+          </Box>
         </Box>
-      </Box>
     </ThemeProvider>
   );
 }
