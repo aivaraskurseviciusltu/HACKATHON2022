@@ -79,15 +79,13 @@
   justify-content: space-between;
 }
 
-.raise {
+/* .raise {
   border:3px solid rgb(112, 114, 34);
-}
+} */
 
 .raise:hover,
 .raise:focus {
   transition: 0.25s ease;
-  border:3px solid rgb(216, 216, 20);
-  box-shadow: 0 0.5em 0.5em -0.4em rgb(216, 216, 20);
   transform: translateY(-0.25em);
   scale: 1.02;
 }
